@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="eu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arketipoen festa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="host" data-phase="lobby">
+<div id="app">
+  <header>
+    <div class="logo" data-i18n="title"></div>
+    <div id="meta"></div>
+  </header>
+
+  <section id="lobby">
+    <div>
+      <h1 data-i18n="title"></h1>
+      <div id="chips"></div>
+    </div>
+    <div class="join">
+      <div class="lbl" data-i18n="joinAt"></div>
+      <div id="url"></div>
+      <div class="lbl" data-i18n="codeLbl"></div>
+      <div id="code">····</div>
+      <div id="qr"></div>
+    </div>
+  </section>
+
+  <section id="stageWrap" class="card">
+    <div id="badge"></div>
+    <div id="meme"></div>
+    <div id="stamp"></div>
+  </section>
+
+  <aside id="side">
+    <div id="pPlay">
+      <div class="panel card">
+        <div class="rlabel" id="rlabel"></div>
+        <div id="bar"><i></i></div>
+        <div class="stats"><span id="cnt"></span><span id="ptsNow"></span></div>
+      </div>
+      <div id="clues"></div>
+    </div>
+
+    <div id="pReveal">
+      <div class="panel card">
+        <div class="rlabel" data-i18n="answersTitle"></div>
+        <div class="bars" id="bars"></div>
+      </div>
+      <div class="panel card">
+        <div class="rlabel" data-i18n="topTitle"></div>
+        <ol class="lb" id="lb"></ol>
+      </div>
+    </div>
+  </aside>
+
+  <section id="final"></section>
+  <section id="slides"></section>
+
+  <footer>
+    <div><span id="net"></span> <button class="btn alt" id="mus" title="M">♪ Musika</button> <button class="btn alt" id="bots" hidden>+5 bots</button></div>
+    <div class="nav"><button class="btn alt" id="prev" hidden data-i18n="prevSlide"></button> <button class="btn" id="go"></button></div>
+  </footer>
+</div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="data.js"></script>
+<script src="content.js"></script>
+<script src="music.js"></script>
+<script src="host.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="eu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Arketipoen festa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="player">
+<div id="msg" class="msg" hidden></div>
+<div class="pl">
+  <div class="brand" id="brand">Arketipoen festa</div>
+
+  <form id="join" class="scr">
+    <div class="card box">
+      <label><span id="lName"></span><input id="fName" maxlength="14" autocomplete="off" required></label>
+      <label><span id="lCode"></span><input id="fCode" maxlength="4" autocomplete="off" required></label>
+      <div class="err" id="err"></div>
+      <button class="btn" id="bJoin" type="submit" style="width:100%"></button>
+    </div>
+  </form>
+
+  <div id="wait" class="scr center" hidden>
+    <div class="big" id="wTitle"></div>
+    <p id="wSub" style="font-weight:700"></p>
+  </div>
+
+  <div id="round" class="scr" hidden>
+    <div class="hd"><span id="rNum"></span><span class="pts" id="rPts"></span></div>
+    <div id="rClues"></div>
+    <div class="big" id="rLook" hidden></div>
+    <div id="rPick" hidden>
+      <div style="font-weight:800;margin-bottom:8px" id="rQ"></div>
+      <div class="opts" id="opts"></div>
+      <button class="btn" id="bLock" style="width:100%;margin-top:12px"></button>
+    </div>
+  </div>
+
+  <div id="reveal" class="scr center" hidden>
+    <div class="card box res" id="resBox" style="width:100%">
+      <div class="big" id="resTitle"></div>
+      <p style="font-weight:800;margin-top:8px" id="resIt"></p>
+      <p class="big" id="resGain" style="margin-top:10px"></p>
+    </div>
+    <p style="font-weight:800" id="resRank"></p>
+  </div>
+
+  <div id="end" class="scr center" hidden>
+    <div class="big" id="eTitle"></div>
+    <div class="card box" style="width:100%"><p style="font-weight:800" id="eRank"></p></div>
+    <p style="font-weight:700" id="eSub"></p>
+  </div>
+</div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="data.js"></script>
+<script src="player.js"></script>
+</body>
+</html>
